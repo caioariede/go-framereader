@@ -1,0 +1,10 @@
+{
+	"ImportPath": "github.com/caioariede/go-framereader",
+	"GoVersion": "go1.8",
+	"Deps": [
+		{
+			"ImportPath": "github.com/lazywei/go-opencv/opencv",
+			"Rev": "76a80c792afab341300db33893a39c06b366787b"
+		}
+	]
+}

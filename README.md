@@ -1,7 +1,7 @@
 # go-framereader
 A simple API to Iterate over video frames sent over STDIN using MJPEG or PPM formats. The resulting frames are OpenCV Image objects.
 
-## example
+## Example
 ```go
 import (
     "github.com/caioariede/go-framereader"
@@ -20,4 +20,16 @@ func main() {
         opencv.WaitKey(1000)
     }
 }
+```
+
+### Running
+
+##### MJPEG
+```bash
+ffmpeg -i VIDEO.mp4 -qscale:v 2 -vcodec mjpeg -f image2pipe -pix_fmt yuvj420p - | ./example
+```
+##### PPM
+
+```bash
+ffmpeg -i VIDEO.mp4 -f image2pipe -qscale:v 2 -vcodec ppm | ./example
 ```
